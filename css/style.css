@@ -1,0 +1,39 @@
+body {
+  background-color: #2ecc71;
+}
+.search-container {
+  margin: auto; /*center align both vertically and horizontally*/
+  width: 50%;
+  padding: 5rem;
+  text-align: center;
+}
+
+#search-btn {
+  margin: 2rem;
+  
+}
+
+/*=======Some adjustments on mobile devices=======*/
+@media only screen and (max-width: 400px) {
+
+  .search-container {
+    margin: auto; /*center align both vertically and horizontally*/
+    width: 100%;
+  }
+  h1 {
+    font-size: 1em;
+  }
+}
+
+/*==========Adjustments for tablets==========*/
+@media only screen and (max-width: 800px) {
+
+  .search-container {
+    margin: auto; /*center align both vertically and horizontally*/
+    width: 50%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+
+}
