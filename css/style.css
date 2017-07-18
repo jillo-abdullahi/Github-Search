@@ -1,17 +1,19 @@
 body {
   background-color: #2ecc71;
 }
+/*=====Search container styles=======*/
 .search-container {
   margin: auto; /*center align both vertically and horizontally*/
   width: 50%;
-  padding: 5rem;
-  text-align: center;
+  padding-top: 2rem;
 }
 
 #search-btn {
-  margin: 2rem;
+  margin-top: 2rem;
   
 }
+
+/*=====search results container styles====*/
 
 /*=======Some adjustments on mobile devices=======*/
 @media only screen and (max-width: 400px) {

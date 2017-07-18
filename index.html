@@ -21,19 +21,13 @@
   </head>
   <body>
     <div class="search-container">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-              <div class="well well-lg">
-                  <h1>Search Github User</h1>
-                  <input type="text" class="form-control" id="user-input" placeholder="Enter username to start search"/>
-                  <button type="button" class="btn btn-md" id="search-btn"><i class="fa fa-search"></i> Search Github</button>
-              </div>
-          </div>
+       <div class="well well-lg">
+          <h1>Search Github User</h1>
+            <input type="text" class="form-control" id="user-input" placeholder="Enter username"/>
+            <button type="button" class="btn btn-md btn-primary" id="search-btn"><i class="fa fa-search"></i> Search Github</button>
+            <div id="search-results"></div>
         </div>
-      </div>
-  </div>
-    
+    </div>
 
     <!--==============JQuery================-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
