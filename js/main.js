@@ -10,13 +10,15 @@ $(document).ready(function(){
 
         requestJSON(useruri, function(json){
 
-            if(json.message == "Not found" || username == ''){
+            if(json.message == "Not Found" || username == ''){
                 $("#search-results").html('<h2>User Info Not Found</h2>');
             } 
             
             else {
+
+                //Grab stuff that you need from the json file returned
                 var fullname   = json.name;
-                var username   = json.login;
+                var usersname   = json.login;
                 var aviurl     = json.avatar_url;
                 var profileurl = json.html_url;
                 var location   = json.location;
@@ -25,10 +27,10 @@ $(document).ready(function(){
                 var reposnum     = json.public_repos;
 
                 if(fullname == undefined){
-                    fullname = username;
+                    fullname = usersname;
                 }
 
-                var outhtml = '<h2>'+fullname+'<span class="smallname">(@<a href="'+profileurl+'"target="_blank">'+username+'</a>)</span></h2>';
+                var outhtml = '<h2>'+fullname+'<span class="smallname">(@<a href="'+profileurl+'"target="_blank">'+usersname+'</a>)</span></h2>';
                 outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
                 outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+'<br>Repos: '+reposnum+'</p></div>';
                 outhtml = outhtml + '<div class="repolist clearfix">';
@@ -44,7 +46,7 @@ $(document).ready(function(){
                         outhtml = outhtml + '<p>No repos!</p></div>'; 
                     } 
                     else {
-                        outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
+                        outhtml = outhtml + '<p><strong>Repositories List:</strong></p> <ul>';
                         //Looping through the list of repos and pushing each into an <li>
                         $.each(repos, function(index){
                             outhtml = outhtml + '<li><a href="'+repos[index].html_url+'" target="_blank">'+repos[index].name + '</a></li>';
