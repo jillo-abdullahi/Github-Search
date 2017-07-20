@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	
+    
+
     $("#search-btn").on("click", function(e){
     	e.preventDefault();
         $("#search-results").html('<div class="loader"><img src="./images/ajax-loader.gif" alt="loading..."/></div>');
@@ -59,6 +61,14 @@ $(document).ready(function(){
         });//end of requestJSON function
     });//end of button onclick
 
+    
+    //======Adding enter key press event for the search field======
+        $("#user-input").keypress(function(e){
+                if(e.which==13){//Enter key pressed
+                    $("#search-btn").click();
+                    }
+            }); //End of text field keypress event.
+
 
        //=====callback function for all ajax calls including other button presses===
         function requestJSON(url, callback){
@@ -71,3 +81,6 @@ $(document).ready(function(){
 
         }
 });//End of document
+
+
+
