@@ -47,6 +47,10 @@ body {
   display: block;
   padding: 25px 0;
 }
+
+#search-results h2 {
+  font-size: 1.5em;
+}
 #loader {
   display: block;
   width: 200px;
@@ -108,8 +112,17 @@ body {
 }
 
 /* clearfix */
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
+.clearfix::after { 
+      content: "."; 
+      display: block; 
+      clear: both; 
+      visibility: hidden; 
+      line-height: 0; 
+      height: 0; 
+    }
+.clearfix { 
+  display: inline-block; 
+}
  
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
@@ -118,26 +131,18 @@ html[xmlns] .clearfix { display: block; }
 
 
 /*=======Some adjustments on mobile devices=======*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
 
   .search-container {
     margin: auto; /*center align both vertically and horizontally*/
-    width: 100%;
+    width: 70%;
   }
   h1 {
     font-size: 1em;
   }
+
+  #search-results h2 {
+    font-size: 1em;
+  }
 }
 
-/*==========Adjustments for tablets==========*/
-@media only screen and (max-width: 800px) {
-
-  .search-container {
-    margin: auto; /*center align both vertically and horizontally*/
-    width: 50%;
-  }
-  h1 {
-    font-size: 2em;
-  }
-
-}
